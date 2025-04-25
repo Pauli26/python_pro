@@ -1,0 +1,13 @@
+##Generador de contraseñas
+#:D
+import random
+caracteres = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789!#$%&/()=?¿¡*+~^{}[]:;,.<>@"
+longitud = int(input("¿Cuántos caracteres tendrá la contraseña?"))
+if longitud < 6: 
+    print("La contraseña es muy corta, debe tener por lo menos seis caracteres")
+elif longitud > 30:
+    print("La contraseña es muy larga, debe medir menos de treinta caracteres")
+contraseña = ""
+for i in range(longitud):
+    contraseña += random.choice(caracteres)
+    print ("Tu contrasena es:", contraseña)
